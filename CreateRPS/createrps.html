@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create RPS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!-- <style>
+        body{
+            background-color:#f5f7fb;
+        }
+
+        .sidebar{
+            width:250px;
+            min-height:100vh;
+            background:#0d6efd;
+            position:fixed;
+            top:0;
+            left:0;
+            color:white;
+            padding-top:20px;
+        }
+
+        .sidebar a{
+            color:white;
+            text-decoration:none;
+            display:block;
+            padding:12px 20px;
+            border-radius:8px;
+            margin:5px 10px;
+        }
+
+        .sidebar a:hover{
+            background:rgba(255,255,255,0.2);
+        }
+
+        .main-content{
+            margin-left:250px;
+        }
+
+        .navbar-custom{
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-card{
+            max-width:800px;
+            margin:auto;
+        }
+    </style> -->
+</head>
+
+
+<body>
+    <!-- <nav class="navigation">
+        <img src="/img/LogoAmikom.png" alt="Logo Amikom" width="70px">
+        <p >FAUZA KHOIRUNISA
+            <br>22.01.4823
+        </p>
+
+        <h1>Create RPS</h1>
+
+        <ul>
+            <a href="/Login/index.html"><button class="btnLogout-popup">Log out</button></a>
+            
+        </ul>
+    </nav> -->
+
+
+<nav class="navigation">
+    <div class="nav-left">
+        <img src="/img/LogoAmikom." alt="Logo Amikom">
+
+        <div class="user-info">
+            <h4>FAUZA KHOIRUNISA</h4>
+            <p>22.01.4823</p>
+        </div>
+    </div>
+
+    <h1 class="text-white mb-0 fw-bold">Create RPS</h1>
+    <a href="/Login/index.html">
+        <button class="btnLogout-popup">
+            Log Out
+        </button>
+    </a>
+</nav>
+
+<!-- Tombol buka/tutup sidebar -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i><ion-icon name="menu-outline" id="btn"></ion-icon></i>
+        <i><ion-icon name="close" id="cancel"></ion-icon></i>
+    </label>
+
+
+
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1 class="fw-bold">Menu Create</h1>
+
+        <ul>
+            <li>
+                <a href="/dashboard/dashboard.html"> <ion-icon name="grid-sharp"></ion-icon></i>Back to Dashboard</a>
+            </li>
+
+            <li>
+                <a href="/CreateRPS/headerRPS.html">
+                <ion-icon name="document-text-outline"></ion-icon>Header RPS</a>
+            </li>
+            
+            <li>
+                <a href="/CreateRPS/createrps.html">
+                <ion-icon name="create-outline"></ion-icon>Identitas RPS</a>
+            </li>
+            
+            <li>
+                <a href="/CreateRPS/gambaranRPS.html"><ion-icon name="reader-outline"></ion-icon>Gambaran Umum</a>
+            </li>
+
+            <li>
+                <a href="/CreateRPS/capaianRPS.html"><ion-icon name="school-outline"></ion-icon>Capaian Belajar</a>
+            </li>
+
+            <li>
+                <a href="/viewRPS/viewrps.html"> <ion-icon name="eye-sharp"></ion-icon></i>View RPS</a>
+            </li>
+
+            
+
+            <li>
+                <a href="/setting.html/setting.html"> <ion-icon name="settings-sharp"></ion-icon></i>Settings</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <section class="container mt-4">
+        <!-- <div class="form-box">
+            <div class="form-value">
+                <form>
+
+                    <form method="post" class="input-group">
+                        <h3>Identitas RPS</h3>
+                        <label for="validationDefault01" class="form-label">Nama Matakuliah</label>
+                        <input type="text" name="nama_matakuliah" id="validationDefault01" class="input-field" placeholder="Masukkan Nama Mata Kuliah" required>
+                        <br>
+                        <label for="validationDefault02" class="form-label">Kode Matakuliah</label>
+                        <input type="text" name="kode_matakuliah" id="validationDefault02" class="input-field" placeholder="Masukkan Kode Matakuliah" required>
+
+                        <label for="validationDefault03" class="form-label">Jenjang</label>
+                        <input type="text" name="jenjang" id="validationDefault03" class="input-field" placeholder="Masukkan Jenjang D3 atau S1" required>
+
+                        <label for="validationDefault04" class="form-label">Jumlah SKS</label>
+                        <input type="text" name="jumlah_sks" id="validationDefault04" class="input-field" placeholder="Masukkan Jumlah SKS" required>
+
+                        
+                        <input type="checkbox" class="check-box"><span>Remember me</span>
+                        <br>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+
+                </form>
+
+                
+            </div>
+        </div> -->
+
+
+        
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-8 mt-4">
+
+
+        <div class="card shadow-lg border-0 rounded-4 mt-4">
+            <div class="card-header text-white">
+                <h3 class="mb-0 fw-bold">Identitas RPS</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form method="post">
+
+                    <div class="mb-3 fw-bold">
+                        <label for="validationDefault01" class="form-label">
+                            Nama Mata Kuliah
+                        </label>
+                        <input
+                            type="text"
+                            name="nama_matakuliah"
+                            id="validationDefault01"
+                            class="form-control"
+                            placeholder="Masukkan nama mata kuliah"
+                            required>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3 fw-bold">
+                            <label for="validationDefault02" class="form-label">
+                                Kode Mata Kuliah
+                            </label>
+                            <input
+                                type="text"
+                                name="kode_matakuliah"
+                                id="validationDefault02"
+                                class="form-control"
+                                placeholder="Masukkan kode mata kuliah"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3 fw-bold">
+                            <label for="validationDefault03" class="form-label">
+                                Jenjang
+                            </label>
+                            <select
+                                name="jenjang"
+                                id="validationDefault03"
+                                class="form-select"
+                                required>
+                                <option value="">Pilih Jenjang</option>
+                                <option>D3</option>
+                                <option>S1</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 fw-bold">
+                        <label for="validationDefault04" class="form-label">
+                            Jumlah SKS
+                        </label>
+                        <input
+                            type="number"
+                            name="jumlah_sks"
+                            id="validationDefault04"
+                            class="form-control"
+                            placeholder="Masukkan jumlah SKS"
+                            required>
+                    </div>
+
+                    <!-- <div class="form-check mb-4">
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="remember">
+
+                        <label
+                            class="form-check-label"
+                            for="remember">
+                            Remember me
+                        </label>
+                    </div> -->
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3 fw-bold">
+                        Submit
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+
+    </section>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

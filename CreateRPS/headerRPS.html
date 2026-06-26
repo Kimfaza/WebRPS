@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create RPS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+<style>
+    section{
+        min-height: calc(100vh - 90px);
+        margin-top: 100px;
+        padding: 30px;
+        background: #7B8FA1;
+    }
+
+    .header-rps-card{
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.15);
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 10px 25px rgba(0,0,0,.15);
+        overflow: hidden;
+    }
+
+    .header-rps-title{
+        background: #567189;
+        color: white;
+        padding: 18px 25px;
+    }
+
+    .header-rps-title h3{
+        margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .header-rps-body{
+        padding: 30px;
+    }
+
+    .header-rps-body label{
+        
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .header-rps-body input{
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,.4);
+        background: rgba(255,255,255,.2);
+        color: white;
+        outline: none;
+    }
+
+    .header-rps-body input::placeholder{
+        color: rgba(255,255,255,.8);
+    }
+
+    .form-row{
+        display: flex;
+        gap: 20px;
+    }
+
+    .form-group{
+        flex: 1;
+    }
+
+    .btn-simpan{
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: #567189;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .btn-simpan:hover{
+        background: #455d73;
+    }
+</style>
+
+</head>
+
+
+<body>
+<nav class="navigation">
+    <div class="nav-left">
+        <img src="/img/LogoAmikom." alt="Logo Amikom">
+
+        <div class="user-info">
+            <h4>FAUZA KHOIRUNISA</h4>
+            <p>22.01.4823</p>
+        </div>
+    </div>
+
+    <h1 class="text-white mb-0 fw-bold">Header RPS</h1>
+    <a href="/Login/index.html">
+        <button class="btnLogout-popup">
+            Log Out
+        </button>
+    </a>
+</nav>
+
+<!-- Tombol buka/tutup sidebar -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i><ion-icon name="menu-outline" id="btn"></ion-icon></i>
+        <i><ion-icon name="close" id="cancel"></ion-icon></i>
+    </label>
+
+
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h1 class="fw-bold">Menu Create</h1>
+        <ul>
+            <li>
+                <a href="/dashboard/dashboard.html"> <ion-icon name="grid-sharp"></ion-icon></i>Back to Dashboard</a>
+            </li>
+
+            <li>
+                <a href="/CreateRPS/headerRPS.html">
+                <ion-icon name="document-text-outline"></ion-icon>Header RPS</a>
+            </li>
+
+            <li>
+                <a href="/CreateRPS/createrps.html">
+                <ion-icon name="create-outline"></ion-icon>Identitas RPS</a>
+            </li>
+
+            <li>
+                <a href="/CreateRPS/gambaranRPS.html"><ion-icon name="reader-outline"></ion-icon>Gambaran Umum</a>
+            </li>
+
+            <li>
+                <a href="/CreateRPS/capaianRPS.html"><ion-icon name="school-outline"></ion-icon>Capaian Belajar</a>
+            </li>
+
+            <li>
+                <a href="/viewRPS/viewrps.html"> <ion-icon name="eye-sharp"></ion-icon></i>View RPS</a>
+            </li>
+
+            <li>
+                <a href="/setting.html/setting.html"> <ion-icon name="settings-sharp"></ion-icon></i>Settings</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form id="login" action="post">
+
+                    <form id="login" action="post" class="input-group">
+                        <h3>Header RPS</h3>
+                        <h4 style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas ultricies mi eget mauris pharetra. Facilisis sed odio morbi quis commodo odio aenean. In hendrerit gravida rutrum quisque. Mauris sit amet massa vitae tortor. Sed id semper risus in hendrerit gravida rutrum quisque non. Sit amet risus nullam eget felis. At ultrices mi tempus imperdiet nulla malesuada. Pharetra sit amet aliquam id diam maecenas ultricies. Ut ornare lectus sit amet est placerat in egestas erat. Mi tempus imperdiet nulla malesuada pellentesque. Porta non pulvinar neque laoreet suspendisse.
+                            
+                        </h4>
+                    </form>
+
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+
+<section>
+    <div class="header-rps-card">
+
+        <div class="header-rps-title">
+            <h3 class="mb-0 fw-bold">
+                <ion-icon name="document-text-outline"></ion-icon>
+                Header RPS
+            </h3>
+        </div>
+
+        <div class="header-rps-body">
+
+            <form>
+                <label>Nama Perguruan Tinggi</label>
+                <input type="text" placeholder="Masukkan Nama Perguruan Tinggi">
+
+                <label>Fakultas</label>
+                <input type="text" placeholder="Masukkan Nama Fakultas">
+
+                <label>Program Studi</label>
+                <input type="text" placeholder="Masukkan Program Studi">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Mata Kuliah</label>
+                        <input type="text" placeholder="Masukkan Nama Mata Kuliah">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kode Mata Kuliah</label>
+                        <input type="text" placeholder="Contoh: IF123">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Semester</label>
+                        <input type="text" placeholder="Contoh: Ganjil">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tahun Akademik</label>
+                        <input type="text" placeholder="2025/2026">
+                    </div>
+                </div>
+
+                <label>Upload Logo Kampus</label>
+                <input type="file">
+
+                <button type="submit" class="btn-simpan">
+                    Simpan
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

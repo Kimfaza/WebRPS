@@ -1,0 +1,391 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: #7B8FA1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*Navigasi yg dipaling atas*/
+/* .navigation {
+    height: 90px;
+    width: 100%;
+    background: #567189;
+
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation img {
+    padding: 30px;
+}
+.navigation p {
+    color: white;
+    position: absolute;
+    left: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.navigation h1 {
+    color: white;
+    position: absolute;
+    left: 650px;
+    font-size: 30px;
+}
+
+.navigation ul {
+    float: right;
+    margin-right: 40px ;
+} */
+
+
+/*Navigation yang Logout*/
+/* .navigation .btnLogout-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogout-popup:hover {
+    background: #fff;
+    color: #083e58;
+} */
+
+
+/* =========================
+NAVBAR
+========================= */
+.navigation {
+    height: 90px;
+    width: 100%;
+    background: #567189;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navigation .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navigation img {
+    width: 60px;
+    height: auto;
+    padding: 0;
+}
+
+.navigation .user-info {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navigation .user-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navigation .user-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.navigation h1 {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Tombol Logout */
+.navigation .btnLogout-popup {
+    width: 100px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navigation .btnLogout-popup:hover {
+    background: #fff;
+    color: #567189;
+}
+/* ----------- */
+
+/* =========================
+SIDEBAR KIRI LAYAR
+========================= */
+.sidebar {
+    position: fixed;
+    top: 90px;
+    left: -250px;
+    width: 250px;
+    height: calc(100vh - 90px);
+    background: #567189;
+    transition: all .5s ease;
+    /* overflow-y: auto; */
+    z-index: 999;
+}
+
+.sidebar h1 {
+    font-size: 22px;
+    top: 80px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #2d5a81;
+    user-select: none;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    
+    /* box-sizing: border-box; */
+    /* border-top: 1px solid rgba(255,255,255,.1); */
+    border-bottom: 1px solid white;
+    /* transition: .4s; */
+    text-decoration: none;
+}
+
+ul li a:hover {
+    padding-left: 0px;
+    color: #042e53;
+}
+
+.sidebar ul a ion-icon {
+    margin-right: 16px;
+}
+
+
+#check {
+    display: none;
+}
+label #btn,label #cancel {
+    /* position: absolute; */
+    position: fixed;
+    cursor: pointer;
+    background: #083e58;
+    /* border-radius: 3px; */
+    
+}
+
+/*Kotak garis tiga*/
+label #btn {
+    left: 20px;
+    top: 100px;
+    font-size: 35px;
+    color: white;
+    z-index: 1001;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #cancel {
+    z-index: 1001;
+    left: -200px;
+    top: 110px;
+
+    font-size: 30px;
+    color: white;
+    padding: 0px;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar {
+    left: 0;
+}
+#check:checked ~ label #btn {
+    /* left: 250px; */
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel {
+    left: 210px;
+}
+#check:checked ~ section {
+    margin-left: 250px;
+}
+
+
+
+
+/* =========================
+INI SECTION
+========================= */
+/* Geser konten ke kanan */
+section {
+    /* margin-left: 0; */
+    /* background: #7B8FA1; */
+    /* background-position: center;
+    background-size: cover;
+    height: 100vh; */
+
+    min-height: calc(100vh - 90px);
+    margin-top: 60px;
+    transition: all .5s;
+    padding: 30px;
+}
+#check:checked ~ section{
+    margin-left: 248px;
+}
+/* ----------- */
+
+
+
+/* =========================
+FORM 
+========================= */
+.form-box {
+    /* position: relative;
+    width: 1000px;
+    height: 550px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    
+    padding-top: 20px;
+    padding-left: 50px;
+
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto; */
+
+
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+
+
+}
+
+
+/*Tulisan di dalam Form-box*/
+/* .input-group {
+    top: 130px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+    -webkit-text-fill-color: white;
+}
+
+.input-group label {
+    position: absolute;
+    left: 5px;
+    margin-left: 50px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 100%;
+    height: 50px;
+    
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+    -webkit-text-fill-color: white;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    
+} */
+
+
+/* TOMBOL */
+/* button {
+    width: 10%;
+    height: 20px;
+    margin-top: 20px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+} */
+
+/* .submit-button{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+} */
+
+
+/* .form-control,
+.form-select{
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color: #567189;
+    box-shadow: 0 0 0 .25rem rgba(86,113,137,.25);
+} */
+
+.card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border: none;
+}
+
+.card-header{
+    background: #567189 !important;
+}
